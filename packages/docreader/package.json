@@ -1,0 +1,43 @@
+{
+  "name": "@edictus/docreader",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@edictus/cedula": "github:luvidal/edictus-cedula#c01dc3395d90866e4be8ec35f40690387c695427",
+    "@edictus/classifier": "*",
+    "@edictus/doctypes": "*",
+    "@edictus/extract": "github:luvidal/edictus-extract#2b1726b265a3e911707f3bc2b57018649b3bc122",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.4.624"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luvidal/edictus-document-ai",
+    "directory": "packages/docreader"
+  }
+}

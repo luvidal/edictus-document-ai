@@ -1,0 +1,52 @@
+{
+  "name": "@edictus/classifier",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "playground": "tsx dev/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "corpus:manifest": "CORPUS_ROOT=corpus tsx tests/corpus-manifest.ts --check",
+    "corpus:manifest:per-file": "CORPUS_ROOT=corpus/per-file tsx tests/corpus-manifest.ts --check",
+    "corpus:manifest:per-solicitud": "CORPUS_ROOT=corpus/per-solicitud tsx tests/corpus-manifest.ts --check",
+    "groundtruth:all": "CORPUS_ROOT=corpus tsx tests/groundtruth.ts",
+    "groundtruth:per-file": "CORPUS_ROOT=corpus/per-file tsx tests/groundtruth.ts",
+    "groundtruth:per-solicitud": "CORPUS_ROOT=corpus/per-solicitud tsx tests/groundtruth.ts",
+    "groundtruth:per-solicitud:trusted": "CORPUS_ROOT=corpus/per-solicitud tsx tests/groundtruth.ts --minInspection=90",
+    "groundtruth": "tsx tests/groundtruth.ts",
+    "corpus:review": "CORPUS_ROOT=corpus tsx dev/server.ts",
+    "doctype:regression": "tsx tests/doctype-refactor-regression.ts"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@google/genai": "^0.9.0",
+    "@types/node": "^22.0.0",
+    "dotenv": "^16.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luvidal/edictus-document-ai",
+    "directory": "packages/classifier"
+  }
+}

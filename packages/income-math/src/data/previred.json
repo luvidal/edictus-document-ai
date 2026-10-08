@@ -1,0 +1,6 @@
+{
+  "_comment": "Topes imponibles vigentes (en UF). Actualizar anualmente según tabla de Previred. La conversión a pesos se hace multiplicando por el valor UF del período.",
+  "_fuente": "https://www.previred.com/web/previred/indicadores-previsionales",
+  "tope_afp_salud_uf": 90.8,
+  "tope_cesantia_uf": 127.1
+}

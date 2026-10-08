@@ -1,0 +1,45 @@
+{
+  "name": "@edictus/doctypes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chilean document-type catalog — single source of truth (yaml source + compiler + generated JSON + helpers/types + multipart) for the classifier / extract / cédula engine and the document-reader service.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./multipart": {
+      "types": "./dist/multipart/index.d.ts",
+      "import": "./dist/multipart/index.mjs",
+      "require": "./dist/multipart/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:doctypes": "tsx catalog/build-doctypes.ts",
+    "check:doctypes": "tsx catalog/build-doctypes.ts --check",
+    "prebuild": "npm run check:doctypes",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0",
+    "yaml": "^2.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luvidal/edictus-document-ai",
+    "directory": "packages/doctypes"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "edictus-document-ai",
+  "private": true,
+  "description": "Chilean financial-document AI: classify, split and read identity, payroll, tax and debt documents with Gemini, then turn them into underwriting math.",
+  "workspaces": [
+    "packages/doctypes",
+    "packages/classifier",
+    "packages/docreader",
+    "packages/income-math",
+    "packages/credit-policy"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm test --workspaces"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@edictus/income-math",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@edictus/doctypes": "*",
+    "@edictus/extract": "github:luvidal/edictus-extract#2b1726b265a3e911707f3bc2b57018649b3bc122",
+    "@edictus/reports": "github:luvidal/edictus-reports#0ad7fdee04ed3a18cf9f5906f36c094d43d890ba",
+    "@edictus/tables": "github:luvidal/edictus-tables#16d2df8261c153edf945b2da9a58dc0e322d47e0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luvidal/edictus-document-ai",
+    "directory": "packages/income-math"
+  }
+}

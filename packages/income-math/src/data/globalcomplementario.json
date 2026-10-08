@@ -1,0 +1,15 @@
+{
+  "_comentario": "Tabla Impuesto Global Complementario (Art. 52 LIR). Tramos en UTA. Para obtener pesos, multiplicar por el valor UTA de diciembre del año comercial. Fuente: SII Circular N°9/2025.",
+  "_fuente": "https://www.sii.cl/normativa_legislacion/circulares/2025/circu9.pdf",
+
+  "tramos": [
+    { "desde": 0,     "hasta": 13.5,  "tasa": 0.00,  "rebaja": 0      },
+    { "desde": 13.5,  "hasta": 30,    "tasa": 0.04,  "rebaja": 0.54   },
+    { "desde": 30,    "hasta": 50,    "tasa": 0.08,  "rebaja": 1.74   },
+    { "desde": 50,    "hasta": 70,    "tasa": 0.135, "rebaja": 4.49   },
+    { "desde": 70,    "hasta": 90,    "tasa": 0.23,  "rebaja": 11.14  },
+    { "desde": 90,    "hasta": 120,   "tasa": 0.304, "rebaja": 17.80  },
+    { "desde": 120,   "hasta": 310,   "tasa": 0.35,  "rebaja": 23.32  },
+    { "desde": 310,   "hasta": null,  "tasa": 0.40,  "rebaja": 38.82  }
+  ]
+}
