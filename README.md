@@ -1,5 +1,7 @@
 # edictus-document-ai
 
+**English** · [Español](README.es.md)
+
 AI that reads Chilean financial documents and turns them into credit math.
 
 A mortgage or consumer-loan file arrives as a pile of PDFs and phone photos:
